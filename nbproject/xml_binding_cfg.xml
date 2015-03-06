@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<schemas xmlns='http://xml.netbeans.org/schema/JAXBWizConfig' destdir='build/generated-sources/jaxb' projectName='CHPP_TeamDetails_Parser' version='1.0'>
+	<schema type='-xmlschema' package='team_details_v3_1' name='team_details_v3_1'>
+		<xjc-options>
+			<xjc-option name='-verbose' value='true'/>
+		</xjc-options>
+		<schema-sources>
+			<schema-source location='xml-resources/jaxb/team_details_v3_1/team_details_v3_1.xsd' origLocation='../xmls/team_details_v3_1.xsd'/>
+		</schema-sources>
+		<bindings>
+		</bindings>
+		<catalog/>
+	</schema>
+</schemas>

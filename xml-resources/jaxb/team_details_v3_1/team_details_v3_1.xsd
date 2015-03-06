@@ -1,0 +1,146 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="HattrickData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:string" name="FileName"/>
+        <xs:element type="xs:float" name="Version"/>
+        <xs:element type="xs:int" name="UserID"/>
+        <xs:element type="xs:string" name="FetchedDate"/>
+        <xs:element name="User">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:int" name="UserID"/>
+              <xs:element name="Language">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:byte" name="LanguageID"/>
+                    <xs:element type="xs:string" name="LanguageName"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element type="xs:string" name="SupporterTier"/>
+              <xs:element type="xs:string" name="Loginname"/>
+              <xs:element type="xs:string" name="Name"/>
+              <xs:element type="xs:string" name="ICQ"/>
+              <xs:element type="xs:string" name="SignupDate"/>
+              <xs:element type="xs:string" name="ActivationDate"/>
+              <xs:element type="xs:string" name="LastLoginDate"/>
+              <xs:element type="xs:string" name="NationalTeamCoach"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Teams">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Team" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:int" name="TeamID"/>
+                    <xs:element type="xs:string" name="TeamName"/>
+                    <xs:element type="xs:string" name="ShortTeamName"/>
+                    <xs:element type="xs:string" name="IsPrimaryClub"/>
+                    <xs:element type="xs:string" name="FoundedDate"/>
+                    <xs:element name="Arena">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:int" name="ArenaID"/>
+                          <xs:element type="xs:string" name="ArenaName"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="League">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:byte" name="LeagueID"/>
+                          <xs:element type="xs:string" name="LeagueName"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="Region">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:short" name="RegionID"/>
+                          <xs:element type="xs:string" name="RegionName"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="Trainer">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:int" name="PlayerID"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element type="xs:anyURI" name="HomePage"/>
+                    <xs:element type="xs:anyURI" name="DressURI"/>
+                    <xs:element type="xs:anyURI" name="DressAlternateURI"/>
+                    <xs:element name="LeagueLevelUnit">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:short" name="LeagueLevelUnitID"/>
+                          <xs:element type="xs:string" name="LeagueLevelUnitName"/>
+                          <xs:element type="xs:byte" name="LeagueLevel"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="BotStatus">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="IsBot"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="Cup">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="StillInCup"/>
+                          <xs:element type="xs:byte" name="CupID"/>
+                          <xs:element type="xs:string" name="CupName"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element type="xs:byte" name="FriendlyTeamID"/>
+                    <xs:element type="xs:byte" name="NumberOfVictories"/>
+                    <xs:element type="xs:byte" name="NumberOfUndefeated"/>
+                    <xs:element type="xs:short" name="TeamRank"/>
+                    <xs:element name="Fanclub">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:int" name="FanclubID"/>
+                          <xs:element type="xs:string" name="FanclubName"/>
+                          <xs:element type="xs:short" name="FanclubSize"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element type="xs:anyURI" name="LogoURL"/>
+                    <xs:element type="xs:int" name="YouthTeamID"/>
+                    <xs:element type="xs:string" name="YouthTeamName"/>
+                    <xs:element type="xs:byte" name="NumberOfVisits"/>
+                    <xs:element name="TrophyList">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Trophy" maxOccurs="unbounded" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:byte" name="TrophyTypeId"/>
+                                <xs:element type="xs:byte" name="TrophySeason"/>
+                                <xs:element type="xs:byte" name="LeagueLevel"/>
+                                <xs:element type="xs:string" name="LeagueLevelUnitName"/>
+                                <xs:element type="xs:string" name="GainedDate"/>
+                                <xs:element type="xs:string" name="ImageUrl"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
